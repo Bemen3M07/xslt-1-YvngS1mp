@@ -20,12 +20,14 @@
             <td><xsl:value-of select="country"/></td>
             <td><xsl:value-of select="price"/></td>
        <td>   
-        <xsl:if test = "price &gt; 10">
-          &#128308;
-        </xsl:if>
-        <xsl:if test = "price &lt; 10">
-          &#128994;
-        </xsl:if>
+        <xsl:choose>
+            <xsl:when test="price &gt; 10">
+                &#128308;
+            </xsl:when>
+            <xsl:otherwise>
+                &#128994;
+            </xsl:otherwise>
+        </xsl:choose>
        </td> 
       </tr>
     </xsl:for-each>
