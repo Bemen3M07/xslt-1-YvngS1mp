@@ -11,7 +11,7 @@
       <th style="text-align:left">Country</th>
     </tr>
     <xsl:for-each select="catalog/cd">
-      <xsl:sort select="title"/>
+      <xsl:sort select="Artist"/>
     <tr>
       <td><xsl:value-of select="title"/></td>
       <td><xsl:value-of select="artist"/></td>
